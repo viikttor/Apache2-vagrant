@@ -32,7 +32,7 @@ Vagrant.configure("2") do |config|
   
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
-  # config.vm.network "private_network", ip: "192.168.33.10"
+  config.vm.network "private_network", ip: "172.18.23.250"
 
   # Create a public network, which generally matched to bridged network.
   # Bridged networks make the machine appear as another physical device on
@@ -79,11 +79,11 @@ Vagrant.configure("2") do |config|
   #git clone https://github.com/edsonbenites/html-docs-hello-world.git /var/www/html-docs-hello-world
   #git clone https://github.com/edsonbenites/devops-aula13.git /var/www/devops-aula13
   rm -rf /var/www/introducao-html-css
-  git clone https://github.com/edsonbenites/introducao-html-css.git /var/www/introducao-html-css
-  git clone https://github.com/edsonbenites/Apache2-vagrant.git /etc/apache2/sites-enable
+  git clone https://github.com/viikttor/introducao-html-css.git /var/www/introducao-html-css
+  git clone https://github.com/viikttor/Apache2-vagrant.git /etc/apache2/sites-enable
   # git clone https://github.com/mattdesl/simple-html-index.git /var/www/simple-html-index
   rm /etc/apache2/sites-enabled/000-default.conf
-  git clone https://github.com/edsonbenites/Apache2-vagrant.git /etc/apache2/sites-enabled
+  git clone https://github.com/viikttor/Apache2-vagrant.git /etc/apache2/sites-enabled
   service apache2 restart 
 
   SHELL
